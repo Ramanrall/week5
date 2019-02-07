@@ -36,6 +36,56 @@ namespace week5
             myFavVariable ++;
             return true;
         }
+        class dog
+        {
+            public dog (string name, string breed)
+            {
+                dog_name = name;
+                dog_breed = breed;
+              
+
+            }
+
+            public dog()
+            {
+            }
+
+            public string dog_name;
+            public string dog_breed;
+            public dog next_dog;
+           public dog pervious_dog;
+        }
+        class birthday_party
+
+        {
+            
+            public dog peanut;
+            public dog fifi;
+            public dog clerence;
+            public dog roy;
+
+            public dog head;
+            public dog tail;
+            public void setUpPartyList()
+            {
+                peanut = new dog();
+                fifi = new dog();
+                clerence = new dog();
+                roy = new dog();
+
+                peanut.pervious_dog = null;
+                peanut.next_dog = fifi;
+                fifi.pervious_dog = peanut;
+                fifi.next_dog = clerence;
+                clerence.pervious_dog = fifi;
+                clerence.next_dog = roy;
+                roy.pervious_dog = clerence;
+                roy.next_dog = null;
+                head = peanut;
+                tail = clerence;
+            }
+        }
+
             }
 
 }
